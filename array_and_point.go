@@ -76,9 +76,21 @@ func main() {
 	/*end 在函数间传递数组*/
 
 	/*start 在函数间传递指针, 相比在函数间传递数组能更节省内存
+	  //在函数间传递数组
 	  var array [1e6]int
-	  foo(&array)
+	  func foo(array [1e6]int) {}
+	  foo(array)
+
+	  //在函数间传递指针
+	  var array [1e6]int
 	  func foo(array *[1e6]int) {}
+	  foo(&array)
+
+	  //在函数间传递切片
+	  slice := make([]int, 1e6)
+	  slice = foo(slice)
+	 // 函数foo 接收一个整型切片，并返回这个切片，一个切片需要24 字节的内存：指针字段需要8 字节，长度和容量 字段分别需要8 字节
+	  func foo(slice []int) []int {}
 	  */
 
 }
