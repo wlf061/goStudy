@@ -2,6 +2,8 @@
 // type implement the same interface.
 package main
 
+
+
 import (
 	"fmt"
 )

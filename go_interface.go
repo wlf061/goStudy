@@ -5,6 +5,8 @@ import (
 	"fmt"
 )
 
+
+
 // notifier is an interface that defined notification
 // type behavior.
 type notifier interface {
